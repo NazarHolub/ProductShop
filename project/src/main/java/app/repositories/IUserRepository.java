@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IUserRepository extends JpaRepository<User, Long>, JpaSpecificationExecutor<User> {
+public interface IUserRepository extends JpaRepository<User, Long> {
     public User findByEmail(String email);
 }
