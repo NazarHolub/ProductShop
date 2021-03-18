@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<style>
+    .input {
+    margin-left: 15px;
+    }
+</style>
+
+<head>
+    <title>login</title>
+</head>
+<body>
+
+<div style="text-align: center">
+    <div class="row">
+        <h1 style="text-align: center">Login</h1>
+        <form action="#" th:action="@{/login}" method="post">
+            <div style="margin-top: 5px;">
+                <label style="margin-right: 7px;" for="username">Email</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div style="margin-top: 5px;">
+                <label style="margin-right: 7px;" for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <button style="margin-top: 12px;" type="submit">Sign In</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
