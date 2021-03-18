@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout}">
+<html lang="en">
 <head>
     <title>index</title>
 
@@ -9,7 +7,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-warning">
-    <a class="navbar-brand" th:href="@{/}">Product Shop</a>
+    <a class="navbar-brand" href="/project/pages/index.html">Product Shop</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
             aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -18,14 +16,14 @@
     <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ml-auto">
 
-            <li sec:authorize="isAuthenticated()" class="nav-item">
-                <a class="nav-link" th:href="@{/logout}">
-                    <span th:text="${#authentication.name}"></span>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <span text="${#authentication.name}"></span>
                 </a>
             </li>
-            <li sec:authorize="isAuthenticated()" class="nav-item">
+            <li class="nav-item">
                 <span class="nav-link">
-                    <form th:action="@{/logout}" method="post">
+                    <form action="#" method="post">
                         <input class="btn" type="submit" value="Exit"/>
                     </form>
                 </span>
@@ -33,16 +31,15 @@
         </ul>
     </div>
 </nav>
-<div layout:fragment="content">
+<div>
     <section class="my-5">
-
         <div class="container">
             <div class="row">
                 <div class="card col-4" style="width: 18rem;">
                     <img class="card-img-top" src="https://dostavka.fest.lviv.ua/wp-content/uploads/2020/04/Morkva_Montazhna-oblast-1.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Carrot</h5>
-                        <p class="card-text">Fresh carrotfrom the best fields of Ukraine</p>
+                        <p class="card-text">Fresh carrot from the best fields of Ukraine</p>
                         <a href="#" class="btn btn-warning">Buy</a>
                     </div>
                 </div>
@@ -55,7 +52,7 @@
                         <a href="#" class="btn btn-warning">Buy</a>
                     </div>
                 </div>
-
+        </div>
         </div>
     </section>
 </div>

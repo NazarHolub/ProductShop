@@ -1,34 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout}">
+<html lang="en">
 <head>
     <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
 
-<div layout:fragment="content">
     <section class="my-5">
         <div class="container">
             <div class="row">
-                <h1>Редагувати користувача</h1>
+                <h1>Edit</h1>
                 <div class="col-md-12">
-                    <form action="#" th:action="@{/edit/{id}(id=${user.id})}" th:object="${user}" method="post">
                         <div class="form-group">
-                            <label for="name">Ім'я</label>
-                            <input type="text" class="form-control" th:field="*{name}" id="name">
-                            <span class="invalid text-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name">
                         </div>
                         <div class="form-group">
-                            <label for="email">Електронна адресса</label>
-                            <input type="email" class="form-control" th:field="*{email}" id="email">
-                            <span class="invalid text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email">
                         </div>
-                        <button class="btn btn-primary" type="submit">Зберегти</button>
-                    </form>
+                        <button class="btn btn-primary" type="submit">Save</button>
                 </div>
             </div>
         </div>
     </section>
-</div>
+
 </body>
+</html>
