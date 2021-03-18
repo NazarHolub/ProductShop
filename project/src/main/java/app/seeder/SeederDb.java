@@ -12,13 +12,13 @@ import org.springframework.stereotype.Service;
 import java.util.Arrays;
 
 @Service
-public class SeederDB {
+public class SeederDb {
     private final IUserRepository userRepository;
     private final IRoleRepository roleRepository;
     private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    public SeederDB(IUserRepository userRepository,
+    public SeederDb(IUserRepository userRepository,
                     IRoleRepository roleRepository,
                     PasswordEncoder passwordEncoder/*why here is red, all good... yes?*/) {
         this.userRepository = userRepository;
